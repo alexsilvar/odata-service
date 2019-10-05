@@ -59,6 +59,8 @@ var odataServer = ODataServer(url)
     .model(model)
     .adapter(Adapter(function (es, cb) { cb(null, db) }));
 
+    //Setting cors
+odataServer.cors('*')
 
 http.createServer(odataServer.handle.bind(odataServer)).listen(port);
 console.log("Listening " + port);
