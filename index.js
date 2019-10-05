@@ -45,10 +45,10 @@ var model = {
         "Bookings": {
             entityType: "travel.Booking"
         },
-        "Carrier": {
+        "Carriers": {
             entityType: "travel.Carrier"
         },
-        "Connection": {
+        "Connections": {
             entityType: "travel.Connection"
         }
     }
