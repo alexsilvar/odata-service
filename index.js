@@ -58,6 +58,6 @@ var odataServer = ODataServer("http://localhost:1337")
     .model(model)
     .adapter(Adapter(function (es, cb) { cb(null, db) }));
 
-var port = process.env.port || 1337;
+var port = process.env.PORT || 1337;
 http.createServer(odataServer.handle.bind(odataServer)).listen(port);
 console.log("Listening " + port);
