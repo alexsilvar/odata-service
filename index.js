@@ -55,7 +55,7 @@ var model = {
 };
 var port = process.env.PORT || 1337;
 var url = process.env.ROOT_URL_S || process.env.ROOT_URL_S || "http://localhost";
-var odataServer = ODataServer(url+":"+port)
+var odataServer = ODataServer(url)
     .model(model)
     .adapter(Adapter(function (es, cb) { cb(null, db) }));
 
